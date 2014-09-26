@@ -76,6 +76,7 @@ API.txt for details.
 					case 'h':	// For back-compat with 0.7; remove in 1.0
 					case 'H': c = leftPad(hours); break;
 					case 'I': c = leftPad(hours12); break;
+					case 'i': c = hours12; break;
 					case 'l': c = leftPad(hours12, " "); break;
 					case 'm': c = leftPad(d.getMonth() + 1); break;
 					case 'M': c = leftPad(d.getMinutes()); break;
@@ -87,6 +88,7 @@ API.txt for details.
 					case 'Y': c = "" + d.getFullYear(); break;
 					case 'p': c = (isAM) ? ("" + "am") : ("" + "pm"); break;
 					case 'P': c = (isAM) ? ("" + "AM") : ("" + "PM"); break;
+					case 'x': c = (isAM) ? ("" + "") : ("" + "p"); break;
 					case 'w': c = "" + d.getDay(); break;
 				}
 				r.push(c);
